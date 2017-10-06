@@ -1,41 +1,262 @@
+/* ================ Generic CSS================ */
+*{
+      margin: 0;
+      padding: 0;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: fixed;
+      background-size: cover;
+
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      -webkit-background-size: cover;
+}
+
 /* ================ HEADER ================ */
+
+/*
+  Button
+*/
+.btn-group {
+  margin: 0 20px;
+  padding: 10px 0;
+}
+
+.btn {
+  color: black;
+  font-family: verdana;
+  padding: 6px 20px;
+  border-radius: 8px;
+  background-color: white;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: pink;
+  transition: 0.3s background-color ease-in-out;
+}
+
 
 /* ================ HOME Page ================ */
 
-*{
-    margin: 0;
-    padding: 0;
-    background-image: url("../images/backgroundH.jpeg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
+/*
+Home Background Image
+*/
+.home-bg {
+    background-image: url("../images/home-bg.jpeg");
 }
 
-.header-overlay{
-    background-color: rgba(31,31,31,0.75);
-}
-
-
-.iam p{
-    position: relative;
+ .iam {
     text-align: center;
-    top: 300px;
-    left: 10px;
+    position: fixed;
+    top: 500px;
+    left: 500px;
+    font-family: verdana;
     color: white;
-    font-size: 40px;
+    font-size: 120%;
     font-weight: 400;
 }
 
-@media
+@media screen and (max-width: 1520px) {
+  .iam {
+    left: 497px;
+    font-size: 110%;
+  }
+}
 
+@media screen and (max-width: 1460px) {
+  .iam {
+    left: 495px;
+    font-size: 105%;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .iam {
+    left: 487px;
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .iam {
+    left: 477px;
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .iam {
+    top: 475px;
+    left: 467px;
+    font-size: 85%;
+  }
+}
+
+
+@media screen and (max-width: 1020px) {
+  .iam {
+    top: 450px;
+    left: 453px;
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .iam {
+    top: 400px;
+    left: 410px;
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .iam {
+    top: 370px;
+    left: 380px;
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .iam {
+    top: 350px;
+    left: 400px;
+    font-size: 55%;
+  }
+
+  .nav-header .btn {
+    display: none;
+  }
+
+  }
+
+  @media screen and (max-width: 480px) {
+    .iam {
+      left: 360px;
+      font-size: 45%;
+    }
+  }
 
 /* ================ ABOUT PAGE ================ */
 
-/* ================ WORK PAGE ================ */
+.about-bg {
+    background-image: url("../images/about-bg.jpeg");
+}
+
+.containerz{
+  width: 100%;
+}
+
+.myimage {
+  width:375px;
+  height:350px;
+  float: left;
+  margin:5px 0 0 60px;
+  border: 5px solid white;
+  border-radius: 8px;
+}
+
+.aboutme{
+   text-align: center;
+}
+
+/* Make sure that padding behaves as expected */
+ *{box-sizing:border-box}
+
+/* Container for skill bars */
+.containers {
+    width: 60%; /* Full width */
+    background-color: #ddd; /* Grey background */
+}
+
+.skills {
+    text-align: right; /* Right-align text */
+    padding-right: 20px; /* Add some right padding */
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    color: white; /* White text color */
+}
+
+.java {width: 95%; background-color: #808080;} /* Dark Grey*/
+.html {width: 90%; background-color: #4CAF50;} /* Green */
+.css {width: 80%; background-color: #2196F3;} /* Blue */
+.js {width: 65%; background-color: #f44336;} /* Red */
+
 
 /* ================ CONTACT PAGE ================ */
+
+.contact-bg {
+    background-image: url("../images/contact-bg.jpeg");
+  }
+
+  .box1 {
+    height: 70px;
+    width: 350px;
+    margin: 20px 50px 0px 520px;
+    border: 5px solid black;
+    border-radius: 8px;
+    text-align: center;
+    font-family: verdana;
+    color: pink;
+    font-weight: 600;
+
+  }
+
+  .box1:nth-child(1){
+    background-color: white;
+  }
+
+  .box1:nth-child(2){
+  background-color: white;
+  }
+
+  .box1:nth-child(3){
+    background-color: white;
+  }
+
+/* ================ WORK PAGE ================ */
+.work-bg {
+    background-image: url("../images/work-bg.jpg");
+}
+
+/*
+  Container element
+*/
+.container {
+  width: 120%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/*
+   Grid is centered with a specific width
+*/
+.grid {
+  margin: 0 auto;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  margin: 20px 50px 0 150px;
+  display: inline-block;
+  border: 10px solid white;
+  border-radius: 8px;
+  text-align: center;
+  font-family: verdana;
+  color: white;
+  font-weight: 400;
+}
+
+.box:nth-child(1){
+  background-color: blue;
+}
+
+.box:nth-child(2){
+  background-color: red;
+}
+
+.box:nth-child(3){
+  background-color: green;
+}
