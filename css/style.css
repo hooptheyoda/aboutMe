@@ -38,7 +38,12 @@
 }
 
 
-/* ================ HOME Page ================ */
+/*
+  Hamburger
+*/
+
+
+/* ================ HOME PAGE ================ */
 
 /*
 Home Background Image
@@ -47,109 +52,44 @@ Home Background Image
     background-image: url("../images/home-bg.jpeg");
 }
 
- .iam {
-    text-align: center;
-    position: fixed;
-    top: 500px;
-    left: 500px;
-    font-family: verdana;
-    color: white;
-    font-size: 120%;
-    font-weight: 400;
-}
-
-@media screen and (max-width: 1520px) {
-  .iam {
-    left: 497px;
-    font-size: 110%;
-  }
-}
-
-@media screen and (max-width: 1460px) {
-  .iam {
-    left: 495px;
-    font-size: 105%;
-  }
-}
-
-@media screen and (max-width: 1420px) {
-  .iam {
-    left: 487px;
-    font-size: 100%;
-  }
-}
-
-@media screen and (max-width: 1370px) {
-  .iam {
-    left: 477px;
-    font-size: 90%;
-  }
-}
-
-@media screen and (max-width: 1250px) {
-  .iam {
-    top: 475px;
-    left: 467px;
-    font-size: 85%;
-  }
-}
-
-
-@media screen and (max-width: 1020px) {
-  .iam {
-    top: 450px;
-    left: 453px;
-    font-size: 75%;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .iam {
-    top: 400px;
-    left: 410px;
-    font-size: 70%;
-  }
-}
-
-@media screen and (max-width: 930px) {
-  .iam {
-    top: 370px;
-    left: 380px;
-    font-size: 70%;
-  }
-}
-
 @media screen and (max-width: 768px) {
-  .iam {
-    top: 350px;
-    left: 400px;
-    font-size: 55%;
-  }
-
   .nav-header .btn {
     display: none;
-  }
 
   }
 
-  @media screen and (max-width: 480px) {
-    .iam {
-      left: 360px;
-      font-size: 45%;
-    }
-  }
+  .hamburger {
+  display: block;
+  width: 3em;
+  height: 3em;
+}
+
+.hamburger > span {
+  background-color: black;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: 0.5em;
+}
+
+.hamburger > span:nth-child(2) {
+  margin: 4px 0;
+}
+}
 
 /* ================ ABOUT PAGE ================ */
 
 .about-bg {
     background-image: url("../images/about-bg.jpeg");
-}
+  }
 
-.containerz{
-  width: 100%;
+.photome{
+  height: 80%;
+  width: 80%;
 }
 
 .myimage {
+  display: inline;
   width:375px;
   height:350px;
   float: left;
@@ -160,10 +100,25 @@ Home Background Image
 
 .aboutme{
    text-align: center;
+   padding: 40px 0px 0px 25px;
+   weight: bold;
 }
 
-/* Make sure that padding behaves as expected */
- *{box-sizing:border-box}
+.titleAbout{
+  text-align: center;
+  weight: bold;
+}
+/*
+Transparent box
+
+.transbox {
+  margin: 5px 80px 5px 80px;;
+  background-color: #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=60); 
+}
+*/
+
 
 /* Container for skill bars */
 .containers {
@@ -190,30 +145,47 @@ Home Background Image
     background-image: url("../images/contact-bg.jpeg");
   }
 
+  .grid-contact {
+
+  }
+
   .box1 {
     height: 70px;
-    width: 350px;
+    width: 450px;
     margin: 20px 50px 0px 520px;
-    border: 5px solid black;
+    border: 3px solid black;
     border-radius: 8px;
     text-align: center;
     font-family: verdana;
     color: pink;
     font-weight: 600;
-
-  }
-
-  .box1:nth-child(1){
     background-color: white;
   }
 
-  .box1:nth-child(2){
-  background-color: white;
-  }
-
-  .box1:nth-child(3){
+  .contact-me {
+    height: 380px;
+    width: 450px;
+    margin: 20px 50px 0px 520px;
+    border: 3px solid black;
+    border-radius: 8px;
+    text-align: center;
+    font-family: verdana;
+    color: pink;
+    font-weight: 600;
+    padding-top: 25px;
     background-color: white;
   }
+
+  @media screen and (max-width: 1100px) {
+    .box1 {
+      margin: 0 auto;
+    }
+
+    .contact-me {
+      margin: 0 auto;
+    }
+
+    }
 
 /* ================ WORK PAGE ================ */
 .work-bg {
@@ -236,27 +208,73 @@ Home Background Image
   margin: 0 auto;
 }
 
-.box {
-  height: 200px;
-  width: 200px;
-  margin: 20px 50px 0 150px;
+.btn-group-card {
+
+}
+
+.btn-card:nth-child(1) {
+  background-image: url("../images/htmlbg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 25px;
+}
+
+.btn-card:nth-child(2) {
+  background-image: url("../images/cssbg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 25px;
+}
+
+.btn-card:nth-child(3) {
+  background-image: url("../images/jsbg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 25px;
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+} /* end keyframes*/
+
+.btn-card {
+  width: 275px;
+  height: 375px;
+  margin: 20px 50px 0 80px;
   display: inline-block;
   border: 10px solid white;
   border-radius: 8px;
-  text-align: center;
-  font-family: verdana;
-  color: white;
-  font-weight: 400;
 }
 
-.box:nth-child(1){
-  background-color: blue;
+.btn-card:hover {
+	animation: bounce 1s;
 }
 
-.box:nth-child(2){
-  background-color: red;
-}
+@media screen and (max-width: 1220px) {
+  .btn-card:nth-child(3) {
+    float: none;
+    display: block;
+  }
 
-.box:nth-child(3){
-  background-color: green;
-}
+  }
+
+  @media screen and (max-width: 790px) {
+    .btn-card:nth-child(2) {
+      float: none;
+      display: block;
+    }
+
+    }
